@@ -362,8 +362,8 @@ html {
 </style>
 """, unsafe_allow_html=True)
 
-# gemini api key
-genai.configure(api_key='AIzaSyBo3MKncRbB0vn3K0R1KMGHb4aISyCuZTs')
+# gemini api key - loaded from .streamlit/secrets.toml
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 # load model and encoders
 @st.cache_resource
